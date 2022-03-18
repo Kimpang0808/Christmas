@@ -6,47 +6,39 @@
     <script src="script.js"></script>
     <link rel="stylesheet" href="style.css">
   </head>
-  
   <body>
-    
-    <header>
-      <h1 class="title">
-        Math Project
-      </h1>
-      <h3 class="CommentTitle">
-        &lt;유사 편집자적논평&gt;
-      </h3>
-      <h3 class="Comment">
-        Simhae: HI
-      </h3>
-    </header>
-    
-    <div class = "slidebox">
+    <div class="Docbar">
       
-      <input type="radio" name="slide" id ="slide01" checked>
-      <input type="radio" name="slide" id ="slide02">
-      
-      <ul class="slidelist">
-        
-        <li class="slideindex">
+    </div>
+    <div class = "Pages">
+      <ul class="Slidelist">
+        <li class="Slideindex" id = DocBar>
           <div>
-            <label for="slide02"class="right"></label>
-            <h2>Read me!</h2>
+            <ul class="nav">
+              <li class="homescene">
+                Home
+              </li>
+              <li class="projectscene">
+                projects
+              </li>
+            </ul>
           </div>
         </li>
-        
-        <li class="slideindex">
-          <div>
-            <label for="slide01"class="left"></label>
-            <h2>
-              Wordle
-              <br>
-              <button class= "button1" type="button" onclick="location.href='../Wordle_Bell/index.html'">이동하기</button>
-            </h2>
-            
-          </div>
+        <li class="Slideindex" id="Front">
+          <img src="pexels-lumn-167682.jpg">
         </li>
+        <li class = "Slideindex" id="Projects">
+          <div class = "readme">
+            <h3>Read me!</h3>
+          </div>
+          <div class="wordle_bell">
+            <h3>Wordle Bell</h3>
+          </div>
         
+        </li>
+        <li id = "Footer">
+          
+        </li>
       </ul>
     </div>
   </body>
