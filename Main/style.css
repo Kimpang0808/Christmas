@@ -1,98 +1,42 @@
 *{
-  margin:0;padding:0;box-sizing:border-box;
+  margin:0;padding:0;box-sizing:border-box;background:black;
 }
 
 ul li{
-  list-style: none;
+  list-style:none;
 }
 
-.title{
-  text-align: center;
-  border: 10px ridge;
-  font-size:50px;
-}
-
-h2{
-  border: 2px solid;
-  border-radius: 10px;
-  font-size:50px;
-  padding-left:5px;
-  padding-top:5px;
-  padding-bottom:20%;
-  margin-top:20%;
-  margin-left: 28%;
-  margin-right: 28%;
-  text-align: center;
-  background-color: rgb(129, 131, 132);
-  color: rgb(255, 255, 255);
-}
-
-.button1{
-  font-family: inherit;
-  font-weight: bold;
-  border: 0;
-  padding: 0;
-  height: 58px;
-  cursor: pointer;
-  background-color: rgb(0, 0, 0);
-  color: rgb(255, 255, 255);
-  flex-grow: 1;
-  text-transform: uppercase;
-  margin-right: 6px;
-  border-radius: 4px;
-  user-select: none;
-}
-
-[name="slide"]{
-  display:none;
-}
-
-.slidebox{
-  max-width:1000px;
+.Pages{
   width:100%;
   margin:0 auto;
 }
 
-.slidebox .slidelist{
-  white-space:nowrap;
-  overflow:hidden;
-}
-
-.slidebox .slideindex{
-  position:relative;
-  display:inline-block;
-  vertical-align:middle;
+#Front img{
   width:100%;
-  transition:all .35s;
+  margin:0 auto;
 }
 
-.slidebox .slideindex label{
-  position:absolute;
-  z-index:1;
-  top:50%;
-  transform:translateY(-50%);
-  padding:20px;
-  border-radius:50%;
-  cursor:pointer;
+.nav{
+  background:gray;
+  color: white;
+  padding-right: 100%;
 }
 
-label.left{
-  left:20px;
-  background-color:#5F5F5F;
-  background-image:url();
-  background-position: center center;
-  background-size: 50%;
-  background-repeat:no-repeat;
+#DocBar{
+  position: absolute;
+  margin=0;
+}
+#Projects .readme{
+  border: 1px white solid;
+  margin: 10px;
+  padding: 50px;
+}
+#Projects .wordle_bell{
+  border: 1px white solid;
+  margin: 10px;
+  padding: 50px;
 }
 
-label.right{
-  right:20px;
-  background-color:#5F5F5F;
-  background-image:url();
-  background-position: center center;
-  background-size: 50%;
-  background-repeat:no-repeat;
+h3{
+  color: white;
 }
-
-[id="slide01"]:checked ~ .slidelist .slideindex{transform:translateX(0);}
-[id="slide02"]:checked ~ .slidelist .slideindex{transform:translateX(-100%);}
