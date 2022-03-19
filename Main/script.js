@@ -1,27 +1,54 @@
-window.addEventListener("wheel", function(e){
-	e.preventDefault();
-},{passive : false});
-var $html = $("index.html");
-var page = 1;
-var lastPage = $(".Slideindex").length;
+var total_section = 0;
+var current_idx = 0;
+var screen_h = 0;
+var page_h = 0;
 
-$html.animate({scrollTop:0},10);
-$(window).on("wheel", function(e){
- 
-	if($html.is(":animated")) return;
- 
-	if(e.originalEvent.deltaY > 0){
-		if(page== lastPage) return;
- 
-		page++;
-	}else if(e.originalEvent.deltaY < 0){
-		if(page == 1) return;
- 
-		page--;
-	}
-	var posTop = (page-1) * $(window).height();
- 
-	$html.animate({scrollTop : posTop});
- 
+$(document).ready(function(){
+	init();
+	
+	$('body').on('scroll touchmove mousewheel', function(event) {	
+		
+		event.preventDefault();
+		event.stopPropagation();		
+	
+		isScroll = true;		
+		var direction = event.originalEvent.wheelDelta;
+		var y = 0;
+
+		if(direction > 0){
+			current_idx --;
+			if(current_idx < 0){current_idx = -1;}
+			y = current_idx * page_h;
+		}
+		else{
+			current_idx ++;
+			if(current_idx > total_section){
+				current_idx = total_section;
+				return;
+			}
+			
+			y = current_idx * page_h;		
+		}
+		$('html,body').animate({scrollTop: y}, 500);	
+	});
 });
-//https://velog.io/@sklove96/%ED%95%9C-%ED%8E%98%EC%9D%B4%EC%A7%80%EC%94%A9-%EC%98%AC%EB%9D%BC%EA%B0%80%EB%8A%94-%EC%8A%A4%ED%81%AC%EB%A1%A4
+
+$( window ).resize(function() {
+	setHeight();
+});
+
+
+function init(){
+	
+	setHeight();
+	
+	total_section = $('#onepage > section').length;
+	last_y = page_h * total_section;
+}	
+
+function setHeight(){
+	
+	screen_h = document.body.clientHeight;
+	page_h = screen_h;
+	$("#onepage > section").height(page_h);
+}
