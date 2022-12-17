@@ -199,19 +199,19 @@ body {
   }
   .ment {
     font-family: 'Caramel', cursive;
-    font-size: 87px;
+    font-size: 50px;
     text-align: center;
     color: white;
     position: relative;
-    bottom: 65px;
+    bottom: 40px;
   }
 
   .explanation{
     text-align: center;
-    font-size:28px;
+    font-size:25px;
     color: #c54245 ;
     position: relative;
-    bottom: 165px;
+    bottom: 100px;
   }
   
   @keyframes lights {
